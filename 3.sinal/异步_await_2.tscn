@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cypnke4yavwm4"]
+
+[ext_resource type="Script" uid="uid://d3norxtawphqv" path="res://异步_await_2.gd" id="1_at61w"]
+
+[node name="Node_await2" type="Node2D" unique_id=524378785]
+script = ExtResource("1_at61w")
+
+[node name="btn1_start" type="Button" parent="." unique_id=1645471639]
+offset_left = 297.0
+offset_top = 324.0
+offset_right = 411.0
+offset_bottom = 360.0
+text = "btn1"
+
+[node name="btn2_emit" type="Button" parent="." unique_id=2099776280]
+offset_left = 515.0
+offset_top = 325.0
+offset_right = 618.0
+offset_bottom = 355.0
+text = "btn2"

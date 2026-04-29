@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://bk6s27fgu8cp1"]
+
+[ext_resource type="Texture2D" uid="uid://lnoqce4gcnbj" path="res://Img/status/资源 3.png" id="1_vsj31"]
+
+[node name="GUI2" type="Node2D" unique_id=858446432]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1871476989]
+offset_left = 62.0
+offset_top = 35.0
+offset_right = 184.0
+offset_bottom = 80.0
+bbcode_enabled = true
+text = "test"
+
+[node name="TabBar" type="TabBar" parent="." unique_id=939696344]
+offset_left = 268.0
+offset_top = 8.0
+offset_right = 371.0
+offset_bottom = 48.0
+current_tab = 0
+tab_count = 3
+tab_0/title = "a"
+tab_1/title = "b"
+tab_2/title = "c"
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=230009972]
+offset_left = 29.0
+offset_top = 85.0
+offset_right = 1243.0
+offset_bottom = 475.0
+scale = Vector2(0.28862047, 0.35498905)
+texture = ExtResource("1_vsj31")
+
+[node name="Tree" type="Tree" parent="." unique_id=1617670327]
+offset_left = 554.0
+offset_top = 55.999996
+offset_right = 570.0
+offset_bottom = 73.0
+scale = Vector2(12.285714, 5.6666665)
+columns = 4

@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://cjdjuxuuspwv6"]
+
+[ext_resource type="Script" uid="uid://vlbrk7deicim" path="res://node_2d_2.gd" id="1_icdqf"]
+
+[node name="Node2D_2" type="Node2D" unique_id=2004075990]
+script = ExtResource("1_icdqf")
+
+[node name="Button" type="Button" parent="." unique_id=94856735]
+offset_left = 267.0
+offset_top = 205.0
+offset_right = 355.0
+offset_bottom = 243.0
+text = "场景2，打印数"

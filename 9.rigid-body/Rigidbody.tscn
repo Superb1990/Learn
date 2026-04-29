@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://cuq0tdva372yi"]
+
+[ext_resource type="Texture2D" uid="uid://bo0471lq5ncca" path="res://icon.svg" id="1_vo4l8"]
+[ext_resource type="Script" uid="uid://c4iwtkifftlfu" path="res://CharacterBody.gd" id="2_5cpjj"]
+[ext_resource type="Script" uid="uid://dq3fr43w3j16v" path="res://area_2d.gd" id="3_u31qf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5cpjj"]
+size = Vector2(128, 127)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u31qf"]
+size = Vector2(129, 130)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0tfki"]
+size = Vector2(333, 26)
+
+[node name="Node2D" type="Node2D" unique_id=705229285]
+
+[node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=198107117]
+position = Vector2(866, 156)
+collision_layer = 2
+collision_mask = 13
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=1387847334]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_5cpjj")
+
+[node name="Icon" type="Sprite2D" parent="RigidBody2D" unique_id=922512476]
+texture = ExtResource("1_vo4l8")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=251908142]
+modulate = Color(0.30182466, 0.95177954, 0.021621874, 1)
+top_level = true
+collision_layer = 8
+collision_mask = 15
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=2120848064]
+polygon = PackedVector2Array(69, 354, 69, 608, 1034, 610, 1028, 286, 990, 288, 992, 333, 920, 288, 880, 394, 961, 432, 893, 481, 925, 528, 824, 543, 781, 474, 676, 485, 646, 540, 494, 529, 253, 525, 126, 525, 100, 350)
+
+[node name="Polygon2D" type="Polygon2D" parent="StaticBody2D" unique_id=914332208]
+color = Color(0.99458367, 0.54161847, 0.7086059, 1)
+polygon = PackedVector2Array(66, 353, 67, 608, 1035, 611, 1030, 284, 988, 289, 991, 330, 918, 286, 880, 395, 959, 432, 893, 478, 924, 528, 824, 541, 781, 472, 677, 482, 648, 539, 491, 528, 127, 525, 100, 349)
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1115942956]
+collision_mask = 15
+script = ExtResource("2_5cpjj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=571648061]
+position = Vector2(365.5, 234)
+shape = SubResource("RectangleShape2D_u31qf")
+
+[node name="Icon" type="Sprite2D" parent="CharacterBody2D" unique_id=1771247297]
+position = Vector2(366, 234)
+texture = ExtResource("1_vo4l8")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=153478314]
+position = Vector2(-14, 146)
+collision_layer = 4
+script = ExtResource("3_u31qf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1418856675]
+position = Vector2(660, 247)
+shape = SubResource("RectangleShape2D_0tfki")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

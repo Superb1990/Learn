@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dhe83sy7380bf"]
+
+[ext_resource type="PackedScene" uid="uid://to763lesoe40" path="res://电风扇.glb" id="1_a202f"]
+
+[node name="Node3D" type="Node3D" unique_id=1197706602]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=482522484]
+visible = false
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1084912322]
+transform = Transform3D(0.9988989, 1.088783e-09, -0.046914693, 0.013362173, 0.9585813, 0.28450486, 0.044971567, -0.2848185, 0.95752597, 1.1323538, 2.2694569, 2.305748)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1558357153]
+transform = Transform3D(0.8604487, 0, 0.5095371, 0, 1, 0, -0.5095371, 0, 0.8604487, 1.0534098, 0.24175549, 1.0388069)
+light_color = Color(0.07058824, 0.5176471, 0.67058825, 1)
+light_energy = 4.485
+
+[node name="电风扇" parent="." unique_id=763626951 instance=ExtResource("1_a202f")]
+transform = Transform3D(-0.9598494, 0, -0.28051582, -0.04148709, 0.98900294, 0.14195763, 0.27743098, 0.14789572, -0.9492939, -0.52047634, -0.9983425, 3.2105026)

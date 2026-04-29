@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://gdpd7vvengnu"]
+
+[ext_resource type="Texture2D" uid="uid://djdkxcwuybavx" path="res://Sprout Lands - Sprites - Basic pack/Objects/Basic Furniture.png" id="1_1np8c"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vfags"]
+size = Vector2(12, 20)
+
+[node name="boss_node" type="Node2D" unique_id=1438675432]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1768421160]
+motion_mode = 1
+wall_min_slide_angle = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1166568663]
+shape = SubResource("RectangleShape2D_vfags")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=1710899399]
+texture = ExtResource("1_1np8c")
+region_enabled = true
+region_rect = Rect2(33, 26, 14, 22)
+
+[node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="CharacterBody2D" unique_id=1924857522]
+radius = 12.0

@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://2my36bfq21j4"]
+
+[ext_resource type="Texture2D" uid="uid://h0wi14lqbacj" path="res://水管.png" id="1_fus06"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mtbhi"]
+size = Vector2(58, 336)
+
+[node name="水管障碍物" type="Node2D" unique_id=1742840892]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=914677412]
+position = Vector2(520, 176)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=211022021]
+position = Vector2(14, -13)
+shape = SubResource("RectangleShape2D_mtbhi")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=1605852239]
+position = Vector2(14.5, -11)
+scale = Vector2(1.6304348, 2.8166666)
+texture = ExtResource("1_fus06")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=1964306151]
+position = Vector2(800, 472)
+rotation = -3.1415927
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1189329585]
+position = Vector2(14, -13)
+shape = SubResource("RectangleShape2D_mtbhi")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D2" unique_id=1182672258]
+position = Vector2(14.5, -11)
+scale = Vector2(1.6304348, 2.8166666)
+texture = ExtResource("1_fus06")

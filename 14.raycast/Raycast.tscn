@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://d4igcshuwfnai"]
+
+[ext_resource type="Texture2D" uid="uid://cvhtf3n355joh" path="res://icon.svg" id="1_1dpmr"]
+[ext_resource type="Script" uid="uid://d1s0ryicnqjw0" path="res://RayCast2D.gd" id="2_3fg7d"]
+[ext_resource type="PackedScene" uid="uid://2my36bfq21j4" path="res://水管障碍物.tscn" id="3_3fg7d"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dtg82"]
+
+[node name="RayCast2D" type="Node2D" unique_id=1914602738]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=19928043]
+position = Vector2(150, 180)
+script = ExtResource("2_3fg7d")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=1996936389]
+z_index = 1
+scale = Vector2(0.46875, 0.46875)
+texture = ExtResource("1_1dpmr")
+
+[node name="RayCast2D" type="RayCast2D" parent="CharacterBody2D/Sprite2D" unique_id=1050627672]
+position = Vector2(2.133327, 4.266693)
+scale = Vector2(2.1333334, 2.1333334)
+target_position = Vector2(0, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1981916886]
+shape = SubResource("RectangleShape2D_dtg82")
+
+[node name="水管障碍物" parent="." unique_id=1742840892 instance=ExtResource("3_3fg7d")]

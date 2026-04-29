@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://upx5vk62m2tj"]
+
+[ext_resource type="Script" uid="uid://dngre27ib1mlt" path="res://line_2d.gd" id="1_ji610"]
+[ext_resource type="Texture2D" uid="uid://cdwhweo80xiu5" path="res://icon.svg" id="2_bp4be"]
+[ext_resource type="Script" uid="uid://bruyl1chepvwf" path="res://player.gd" id="3_bp4be"]
+
+[sub_resource type="Gradient" id="Gradient_bp4be"]
+
+[node name="Node2D" type="Node2D" unique_id=1813964477]
+
+[node name="Line2D" type="Line2D" parent="." unique_id=691003603]
+width = 30.0
+gradient = SubResource("Gradient_bp4be")
+texture = ExtResource("2_bp4be")
+texture_mode = 2
+script = ExtResource("1_ji610")
+
+[node name="Player" type="Sprite2D" parent="." unique_id=1014725358]
+position = Vector2(586, 340.99997)
+scale = Vector2(0.56640625, 0.56640625)
+texture = ExtResource("2_bp4be")
+script = ExtResource("3_bp4be")
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="." unique_id=1360984990]
+remote_path = NodePath("../Player")
+update_position = false
+update_rotation = false
+update_scale = false

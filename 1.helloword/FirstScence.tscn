@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://c4l245t1fa813"]
+
+[ext_resource type="Script" uid="uid://cyx6pedn8ls8" path="res://Test.gd" id="1_tridf"]
+[ext_resource type="Texture2D" uid="uid://p4nfodn4t585" path="res://icon.svg" id="2_83t5m"]
+[ext_resource type="Texture2D" uid="uid://k7c7abkd0a8v" path="res://Swordsman_lvl3_Hurt_with_shadow.png" id="3_71rps"]
+[ext_resource type="Texture2D" uid="uid://6dcwyvyxmqb7" path="res://import.png" id="4_ghtaq"]
+
+[node name="FirstScence" type="Node2D" unique_id=214218042]
+script = ExtResource("1_tridf")
+
+[node name="Label" type="Label" parent="." unique_id=1502792965]
+visible = false
+offset_left = 457.0
+offset_top = 264.0
+offset_right = 665.0
+offset_bottom = 306.0
+text = "Test  Code"
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=369334907]
+visible = false
+position = Vector2(550, 153)
+texture = ExtResource("2_83t5m")
+
+[node name="Icon2" type="Sprite2D" parent="Icon" unique_id=1828434292]
+visible = false
+modulate = Color(0.9456218, 0.54361427, 0.89184064, 1)
+position = Vector2(91.66141, -1.784523)
+texture = ExtResource("2_83t5m")
+
+[node name="Icon3" type="Sprite2D" parent="." unique_id=1732319022]
+visible = false
+position = Vector2(286, 200)
+texture = ExtResource("2_83t5m")
+
+[node name="SwordsmanLvl3HurtWithShadow" type="Sprite2D" parent="." unique_id=833199140]
+position = Vector2(481.75, 341.95587)
+scale = Vector2(5.4411764, 5.4411764)
+texture = ExtResource("3_71rps")
+region_enabled = true
+region_rect = Rect2(86, 84, 17, 27)
+
+[node name="Import" type="Sprite2D" parent="." unique_id=735601621]
+position = Vector2(744, 333)
+texture = ExtResource("4_ghtaq")
+region_enabled = true
+region_rect = Rect2(276, 4, 215, 224)
+
+[node name="Node2D" type="Node2D" parent="." unique_id=760878173]
+
+[node name="Node2D" type="Node2D" parent="Node2D" unique_id=1186466332]
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/Node2D" unique_id=1547668834]
+position = Vector2(287, 334)
+texture = ExtResource("2_83t5m")

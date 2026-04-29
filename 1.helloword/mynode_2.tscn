@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://e34pnce5vcd0"]
+
+[ext_resource type="Script" uid="uid://ba3uepoesq42v" path="res://mynode.gd" id="1_jasja"]
+
+[node name="Node2D" type="Node2D" unique_id=1349455251]
+
+[node name="MyNode" type="Node2D" parent="." unique_id=714924752]
+script = ExtResource("1_jasja")
+b = "what up"
+metadata/_custom_type_script = "uid://ba3uepoesq42v"

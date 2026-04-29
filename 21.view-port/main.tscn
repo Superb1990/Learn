@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://cnenqmadw1fxp"]
+
+[ext_resource type="PackedScene" uid="uid://dq8vfavul0wvp" path="res://node_2d.tscn" id="1_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://dhe83sy7380bf" path="res://node_3d.tscn" id="2_h2yge"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_0xm2m"]
+viewport_path = NodePath("Control/SubViewport")
+
+[node name="Main" type="Node2D" unique_id=91675394]
+
+[node name="Node2D" parent="." unique_id=247721520 instance=ExtResource("1_0xm2m")]
+
+[node name="Control" type="Control" parent="." unique_id=1506571856]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 860.0
+offset_top = 475.0
+offset_right = 1145.0
+offset_bottom = 636.0
+
+[node name="SubViewport" type="SubViewport" parent="Control" unique_id=1337446905]
+transparent_bg = true
+
+[node name="Node3D" parent="Control/SubViewport" unique_id=1197706602 instance=ExtResource("2_h2yge")]
+
+[node name="TextureRect" type="TextureRect" parent="Control" unique_id=1067174879]
+layout_mode = 0
+offset_left = -70.0
+offset_top = -174.0
+offset_right = 442.0
+offset_bottom = 338.0
+scale = Vector2(0.6896361, 0.66554254)
+texture = SubResource("ViewportTexture_0xm2m")

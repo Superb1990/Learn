@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://drcy3reno2r22"]
+
+[ext_resource type="Script" uid="uid://gwqpeqyysvvv" path="res://1.mindscript.gd" id="1_vasyl"]
+[ext_resource type="Texture2D" uid="uid://bt0ybgy0ydqht" path="res://icon.svg" id="2_3t63l"]
+[ext_resource type="Script" uid="uid://dc306n5lnfs7e" path="res://icon.gd" id="3_qoac8"]
+[ext_resource type="Script" uid="uid://gh7d2xhh4aic" path="res://childicon2.gd" id="4_qoac8"]
+[ext_resource type="Script" uid="uid://cn6oxl8qe445o" path="res://childicon_3.gd" id="5_h74bu"]
+
+[node name="Node2D" type="Node2D" unique_id=1671652907]
+script = ExtResource("1_vasyl")
+
+[node name="childicon" type="Sprite2D" parent="." unique_id=188543489]
+position = Vector2(236, 175)
+texture = ExtResource("2_3t63l")
+script = ExtResource("3_qoac8")
+
+[node name="childicon2" type="Sprite2D" parent="childicon" unique_id=162551390]
+position = Vector2(224, 12)
+texture = ExtResource("2_3t63l")
+script = ExtResource("4_qoac8")
+
+[node name="Button" type="Button" parent="childicon/childicon2" unique_id=1212634727]
+offset_left = -122.0
+offset_top = 109.0
+offset_right = 47.0
+offset_bottom = 147.0
+text = "submit"
+
+[node name="Button2" type="Button" parent="childicon/childicon2" unique_id=320841366]
+offset_left = -284.0
+offset_top = 107.0
+offset_right = -181.0
+offset_bottom = 141.0
+text = "TestSignal"
+
+[node name="childicon3" type="Sprite2D" parent="childicon" unique_id=1239900092]
+position = Vector2(531, 12)
+texture = ExtResource("2_3t63l")
+script = ExtResource("5_h74bu")
+
+[connection signal="button_down" from="childicon/childicon2/Button2" to="childicon/childicon2" method="_on_button_2_button_down"]

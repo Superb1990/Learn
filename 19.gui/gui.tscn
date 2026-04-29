@@ -1,0 +1,226 @@
+[gd_scene format=3 uid="uid://dy0h1a7ngi41n"]
+
+[ext_resource type="Script" uid="uid://bw6npllhxa0rn" path="res://gui.gd" id="1_80edf"]
+[ext_resource type="Texture2D" uid="uid://lplkde42n7mu" path="res://Img/status/资源 1.png" id="2_u77ya"]
+[ext_resource type="Texture2D" uid="uid://cxlyf5khwi64o" path="res://Img/status/资源 2.png" id="3_jf511"]
+[ext_resource type="Texture2D" uid="uid://lnoqce4gcnbj" path="res://Img/status/资源 3.png" id="4_0wv8u"]
+[ext_resource type="Texture2D" uid="uid://dg2e072k77p33" path="res://Img/status/资源 4.png" id="5_67jta"]
+[ext_resource type="VideoStream" uid="uid://xmh24lse331e" path="res://output.ogv" id="6_jf511"]
+[ext_resource type="Script" uid="uid://b1dvxtult4m45" path="res://menu_bar.gd" id="7_0wv8u"]
+
+[node name="GUI" type="Node2D" unique_id=1702790658]
+script = ExtResource("1_80edf")
+
+[node name="Control" type="Control" parent="." unique_id=1918693066]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="通用按钮button" type="Button" parent="." unique_id=228948050]
+offset_left = 22.0
+offset_top = 31.0
+offset_right = 72.0
+offset_bottom = 62.0
+text = "btn"
+
+[node name="链接按钮LinkButton" type="LinkButton" parent="." unique_id=2128767512]
+offset_left = 94.0
+offset_top = 37.0
+offset_right = 134.0
+offset_bottom = 77.0
+text = "百度"
+uri = "http://www.baidu.com"
+
+[node name="CheckBox1" type="CheckBox" parent="." unique_id=1868540773]
+offset_left = 166.0
+offset_top = 36.0
+offset_right = 237.0
+offset_bottom = 67.0
+text = "apple"
+
+[node name="CheckBox2" type="CheckBox" parent="." unique_id=1181174121]
+offset_left = 249.0
+offset_top = 37.0
+offset_right = 318.0
+offset_bottom = 68.0
+text = "orgin"
+
+[node name="水果提示" type="Label" parent="." unique_id=1740949801]
+offset_left = 167.0
+offset_top = 8.0
+offset_right = 327.0
+offset_bottom = 31.0
+text = "选择一种你喜欢的水果"
+
+[node name="CheckBox" type="CheckBox" parent="." unique_id=1735108266]
+offset_left = 412.0
+offset_top = 43.0
+offset_right = 504.0
+offset_bottom = 74.0
+button_pressed = true
+text = "背景音乐"
+
+[node name="设置提示" type="Label" parent="." unique_id=2146648867]
+offset_left = 439.0
+offset_top = 16.0
+offset_right = 479.0
+offset_bottom = 39.0
+text = "设置"
+
+[node name="CheckButton" type="CheckButton" parent="." unique_id=318004220]
+offset_left = 413.0
+offset_top = 95.0
+offset_right = 559.0
+offset_bottom = 126.0
+text = "开启HDR画质"
+
+[node name="ColorPickerButton" type="ColorPickerButton" parent="." unique_id=448876208]
+offset_left = 479.0
+offset_top = 145.0
+offset_right = 567.0
+offset_bottom = 176.0
+text = "请选择颜色"
+color = Color(0.23468167, 0.701266, 0.779366, 1)
+
+[node name="颜色提示" type="Label" parent="." unique_id=2079787774]
+offset_left = 441.0
+offset_top = 152.0
+offset_right = 481.0
+offset_bottom = 175.0
+text = "颜色"
+
+[node name="MenuButton" type="MenuButton" parent="." unique_id=1355998795]
+offset_left = 431.0
+offset_top = 216.0
+offset_right = 471.0
+offset_bottom = 247.0
+text = "列表"
+item_count = 2
+popup/item_0/text = "1.aaa"
+popup/item_0/checked = true
+popup/item_0/id = 0
+popup/item_1/text = "2.bbb"
+popup/item_1/id = 1
+
+[node name="OptionButton" type="OptionButton" parent="." unique_id=2040787784]
+offset_left = 547.0
+offset_top = 225.0
+offset_right = 579.0
+offset_bottom = 245.0
+selected = 0
+item_count = 4
+popup/item_0/text = "请选择国家"
+popup/item_0/id = 0
+popup/item_1/text = "中国"
+popup/item_1/id = 1
+popup/item_2/text = "美国"
+popup/item_2/id = 2
+popup/item_3/text = "俄罗斯"
+popup/item_3/id = 3
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=2032659642]
+offset_left = 70.00001
+offset_top = 126.999985
+offset_right = 1284.0
+offset_bottom = 517.0
+scale = Vector2(0.12000035, 0.11999941)
+texture_normal = ExtResource("2_u77ya")
+texture_pressed = ExtResource("3_jf511")
+texture_hover = ExtResource("4_0wv8u")
+texture_focused = ExtResource("5_67jta")
+
+[node name="HSlider" type="HSlider" parent="." unique_id=1869967954]
+offset_left = 43.0
+offset_top = 209.0
+offset_right = 185.0
+offset_bottom = 225.0
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=127082853]
+offset_left = 73.0
+offset_top = 264.0
+offset_right = 292.0
+offset_bottom = 291.0
+value = 10.0
+
+[node name="SpinBox" type="SpinBox" parent="." unique_id=689325264]
+offset_left = 87.0
+offset_top = 333.0
+offset_right = 173.5
+offset_bottom = 364.0
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="." unique_id=1200760784]
+offset_left = 391.0
+offset_top = 289.0
+offset_right = 1605.0
+offset_bottom = 679.0
+scale = Vector2(0.14854968, 0.079999864)
+value = 40.0
+texture_under = ExtResource("2_u77ya")
+texture_progress = ExtResource("5_67jta")
+tint_over = Color(0.9647059, 0.02745098, 0.34117648, 1)
+tint_progress = Color(0.9843137, 0.99215686, 0.023529412, 1)
+
+[node name="HSeparator" type="HSeparator" parent="." unique_id=764504117]
+offset_left = 53.0
+offset_top = 386.0
+offset_right = 383.0
+offset_bottom = 390.0
+
+[node name="VSeparator" type="VSeparator" parent="." unique_id=830700459]
+offset_left = 413.0
+offset_top = 412.0
+offset_right = 421.0
+offset_bottom = 609.0
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=493596911]
+offset_left = 498.0
+offset_top = 384.0
+offset_right = 743.0
+offset_bottom = 424.0
+scale = Vector2(0.17301974, 0.24805284)
+stream = ExtResource("6_jf511")
+autoplay = true
+
+[node name="ItemList" type="ItemList" parent="." unique_id=1046975779]
+offset_left = 731.0
+offset_top = 24.0
+offset_right = 937.0
+offset_bottom = 87.0
+item_count = 3
+item_0/text = "111"
+item_1/text = "222"
+item_2/text = "333"
+
+[node name="LineEdit" type="LineEdit" parent="." unique_id=1880889432]
+offset_left = 729.0
+offset_top = 110.0
+offset_right = 960.0
+offset_bottom = 153.0
+placeholder_text = "press"
+
+[node name="MenuBar" type="MenuBar" parent="." unique_id=981047986]
+offset_left = 743.0
+offset_top = 193.0
+offset_right = 906.0
+offset_bottom = 233.0
+script = ExtResource("7_0wv8u")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=1549367956]
+offset_left = 570.0
+offset_top = 268.0
+offset_right = 742.0
+offset_bottom = 353.0
+texture = ExtResource("3_jf511")
+
+[node name="ReferenceRect" type="ReferenceRect" parent="." unique_id=105784764]
+offset_left = 842.0
+offset_top = 269.0
+offset_right = 1082.0
+offset_bottom = 384.0
+editor_only = false
+
+[connection signal="toggled" from="CheckBox" to="." method="_on_check_box_toggled"]
+[connection signal="toggled" from="CheckButton" to="." method="_on_check_button_toggled"]
+[connection signal="color_changed" from="ColorPickerButton" to="." method="_on_color_picker_button_color_changed"]
+[connection signal="item_selected" from="OptionButton" to="." method="_on_option_button_item_selected"]

@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dx4sk0soq2oiw"]
+
+[ext_resource type="Script" uid="uid://c32b8duueno7a" path="res://canvas_item.gd" id="1_fcy11"]
+
+[node name="CanvasItem" type="Node2D" unique_id=1211658084]
+script = ExtResource("1_fcy11")

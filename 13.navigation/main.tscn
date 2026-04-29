@@ -1,0 +1,102 @@
+[gd_scene format=3 uid="uid://ctcmooyfqujxv"]
+
+[ext_resource type="PackedScene" uid="uid://u844tfma4nil" path="res://player_node.tscn" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://qiqgjlofayda" path="res://enemy_node.tscn" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://c40jcd8258lrq" path="res://map.tscn" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://gdpd7vvengnu" path="res://boss_node.tscn" id="4_1bvp3"]
+
+[sub_resource type="Animation" id="Animation_1bvp3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("boss_node:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(331, 222)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("boss_node3:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(646, 227)]
+}
+
+[sub_resource type="Animation" id="Animation_lquwl"]
+resource_name = "new_animation"
+length = 8.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("boss_node:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4, 8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(331, 222), Vector2(331, 346), Vector2(331, 222)]
+}
+
+[sub_resource type="Animation" id="Animation_7mycd"]
+resource_name = "new_animation_2"
+length = 8.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("boss_node3:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3.99, 8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(646, 227), Vector2(646, 445.00003), Vector2(646, 227)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7mycd"]
+_data = {
+&"RESET": SubResource("Animation_1bvp3"),
+&"new_animation": SubResource("Animation_lquwl"),
+&"new_animation_2": SubResource("Animation_7mycd")
+}
+
+[node name="main" type="Node2D" unique_id=554405456]
+
+[node name="map" parent="." unique_id=606480031 instance=ExtResource("3_h2yge")]
+
+[node name="enemy_node" parent="." unique_id=793515186 instance=ExtResource("2_0xm2m")]
+position = Vector2(418, 312)
+
+[node name="PlayerNode" parent="." unique_id=506398141 instance=ExtResource("1_ig7tw")]
+position = Vector2(178, 246)
+
+[node name="boss_node" parent="." unique_id=1438675432 instance=ExtResource("4_1bvp3")]
+position = Vector2(331, 222)
+scale = Vector2(2.74, 2.74)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1835243137]
+libraries/ = SubResource("AnimationLibrary_7mycd")
+autoplay = &"new_animation_2"
+
+[node name="boss_node3" parent="." unique_id=265593429 instance=ExtResource("4_1bvp3")]
+position = Vector2(646, 227)
+scale = Vector2(2.74, 2.74)
+
+[node name="enemy_node2" parent="." unique_id=1274289687 instance=ExtResource("2_0xm2m")]
+position = Vector2(835, 312)
+
+[node name="enemy_node3" parent="." unique_id=2034378352 instance=ExtResource("2_0xm2m")]
+position = Vector2(682, 498)

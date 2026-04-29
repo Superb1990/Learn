@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://vpgqucqv5eji"]
+
+[ext_resource type="AudioStream" uid="uid://fcn0pcam0w5m" path="res://ogg/JDSherbert - Ambiences Music Pack - The Blackpenny Pub.ogg" id="1_qc0l7"]
+[ext_resource type="AudioStream" uid="uid://cojodrd7v5pwu" path="res://ogg/JDSherbert - Ambiences Music Pack - Tiger Temple Trial.ogg" id="2_q45hi"]
+
+[node name="Audio" type="Node2D" unique_id=906078449]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=770225185]
+stream = ExtResource("1_qc0l7")
+autoplay = true
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="." unique_id=95747573]
+stream = ExtResource("2_q45hi")
+bus = &"New Bus"

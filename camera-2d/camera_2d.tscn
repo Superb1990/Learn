@@ -1,0 +1,97 @@
+[gd_scene format=3 uid="uid://3gbrscu5hpne"]
+
+[ext_resource type="Script" uid="uid://btger2c525thw" path="res://camera_2d.gd" id="1_jtxfu"]
+[ext_resource type="Texture2D" uid="uid://drdvihvdiphen" path="res://icon.svg" id="1_u0e42"]
+[ext_resource type="Script" uid="uid://bkb7qvjwr8ben" path="res://character_body_2d.gd" id="3_0f2xn"]
+[ext_resource type="Texture2D" uid="uid://cyuh7xiavbij2" path="res://3241d54a7759425f89e0285bd8b83d29.jpg" id="3_wb1d8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_er3fy"]
+size = Vector2(185, 179)
+
+[node name="Camera2D" type="Node2D" unique_id=1098087744]
+script = ExtResource("1_jtxfu")
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=2134793523]
+position = Vector2(580, 326)
+texture = ExtResource("1_u0e42")
+
+[node name="Icon2" type="Sprite2D" parent="." unique_id=1883402128]
+modulate = Color(1, 0.24705882, 0.10980392, 1)
+position = Vector2(575, -327)
+texture = ExtResource("1_u0e42")
+
+[node name="Icon3" type="Sprite2D" parent="." unique_id=1499288259]
+modulate = Color(1, 1, 0.40392157, 1)
+position = Vector2(-580, -320)
+texture = ExtResource("1_u0e42")
+
+[node name="Icon4" type="Sprite2D" parent="." unique_id=1131724761]
+self_modulate = Color(1, 0.2509804, 1, 1)
+position = Vector2(-585, 321)
+texture = ExtResource("1_u0e42")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=444963480]
+modulate = Color(0.2509804, 1, 1, 1)
+position = Vector2(577, 325)
+
+[node name="Camera2D2" type="Camera2D" parent="." unique_id=1446739950]
+modulate = Color(1, 1, 0.56078434, 1)
+position = Vector2(577, -323)
+
+[node name="Camera2D3" type="Camera2D" parent="." unique_id=1259253922]
+modulate = Color(0.33333334, 1, 0.21568628, 1)
+position = Vector2(-579, -324)
+
+[node name="Camera2D4" type="Camera2D" parent="." unique_id=1896139795]
+modulate = Color(0.81960785, 0.7058824, 0.7294118, 1)
+position = Vector2(-577, 324)
+
+[node name="Label" type="Label" parent="." unique_id=2034371826]
+offset_left = 494.0
+offset_top = 166.0
+offset_right = 696.0
+offset_bottom = 230.0
+theme_override_font_sizes/font_size = 30
+text = "右下角，1号相机"
+
+[node name="Label2" type="Label" parent="." unique_id=1627587509]
+offset_left = 480.0
+offset_top = -469.0
+offset_right = 707.0
+offset_bottom = -405.0
+theme_override_font_sizes/font_size = 30
+text = "右上角，2号相机"
+
+[node name="Label3" type="Label" parent="." unique_id=1060750574]
+offset_left = -694.0
+offset_top = -493.0
+offset_right = -467.0
+offset_bottom = -429.0
+theme_override_font_sizes/font_size = 30
+text = "左上角，3号相机"
+
+[node name="Label4" type="Label" parent="." unique_id=1722454362]
+offset_left = -673.0
+offset_top = 166.0
+offset_right = -446.0
+offset_bottom = 230.0
+theme_override_font_sizes/font_size = 30
+text = "左下角，4号相机"
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=938823260]
+position = Vector2(-95, -195)
+script = ExtResource("3_0f2xn")
+
+[node name="player" type="Sprite2D" parent="CharacterBody2D" unique_id=197498438]
+position = Vector2(0, -2.0000305)
+scale = Vector2(0.24000001, 0.24)
+texture = ExtResource("3_wb1d8")
+
+[node name="CameraPlayer" type="Camera2D" parent="CharacterBody2D" unique_id=2031304014]
+self_modulate = Color(0.039215688, 0.13333334, 0.43137255, 1)
+position = Vector2(0, -4)
+scale = Vector2(0.24000001, 0.24)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=705063998]
+position = Vector2(-0.5, -2.5)
+shape = SubResource("RectangleShape2D_er3fy")

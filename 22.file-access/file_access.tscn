@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://twefisc6132p"]
+
+[ext_resource type="Script" uid="uid://cgdh1hlj5hghw" path="res://file_access.gd" id="1_gm1qe"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gm1qe"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.684875, 0.84368443, 0.769227, 1)
+
+[node name="FileAccess" type="Node2D" unique_id=180427230]
+script = ExtResource("1_gm1qe")
+
+[node name="标题" type="Label" parent="." unique_id=1539121064]
+offset_left = 347.0
+offset_top = 10.0
+offset_right = 595.0
+offset_bottom = 79.0
+theme_override_font_sizes/font_size = 50
+text = "文件操作"
+
+[node name="读取文件按钮" type="Button" parent="." unique_id=697716215]
+offset_left = 98.0
+offset_top = 108.0
+offset_right = 170.0
+offset_bottom = 139.0
+text = "读取文件"
+
+[node name="读取文件名输入框" type="TextEdit" parent="." unique_id=2079191731]
+offset_left = 189.0
+offset_top = 103.0
+offset_right = 374.0
+offset_bottom = 144.0
+text = "1.txt"
+
+[node name="读取文件显示区" type="Label" parent="." unique_id=797038606]
+offset_left = 66.0
+offset_top = 153.0
+offset_right = 406.0
+offset_bottom = 236.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_gm1qe")
+
+[node name="获取用户输入框" type="TextEdit" parent="." unique_id=979163648]
+offset_left = 513.0
+offset_top = 103.0
+offset_right = 852.0
+offset_bottom = 238.0
+placeholder_text = "请输入需要写入文件的内容...."
+
+[node name="写入文件提示" type="Label" parent="." unique_id=1782189651]
+offset_left = 564.0
+offset_top = 257.0
+offset_right = 667.0
+offset_bottom = 290.0
+text = "写入文件名："
+
+[node name="写入文件名输入框" type="TextEdit" parent="." unique_id=670334574]
+offset_left = 675.0
+offset_top = 251.0
+offset_right = 789.0
+offset_bottom = 290.0
+text = "2.txt"
+placeholder_text = "写入文件名"
+
+[node name="写入文件按钮" type="Button" parent="." unique_id=1202145961]
+offset_left = 630.0
+offset_top = 298.0
+offset_right = 738.0
+offset_bottom = 329.0
+text = "写入文件"
+
+[connection signal="button_down" from="读取文件按钮" to="." method="_on_button_button_down"]
+[connection signal="button_down" from="写入文件按钮" to="." method="_on_writefile_button_down"]

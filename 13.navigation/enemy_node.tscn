@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://qiqgjlofayda"]
+
+[ext_resource type="Script" uid="uid://cde1lu4e0luw" path="res://enemy.gd" id="1_hll24"]
+[ext_resource type="Texture2D" uid="uid://bg5wpxmu8kckx" path="res://Sprout Lands - Sprites - Basic pack/Characters/Basic Charakter Spritesheet.png" id="2_8ln6b"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8ln6b"]
+
+[node name="enemy_node" type="Node2D" unique_id=793515186]
+
+[node name="enemy" type="CharacterBody2D" parent="." unique_id=72820945]
+motion_mode = 1
+wall_min_slide_angle = 0.0
+script = ExtResource("1_hll24")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemy" unique_id=787655281]
+shape = SubResource("RectangleShape2D_8ln6b")
+
+[node name="Navigation" type="Node2D" parent="enemy" unique_id=1917070734]
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="enemy/Navigation" unique_id=1805752202]
+path_desired_distance = 10.0
+target_desired_distance = 5.0
+path_max_distance = 50.0
+avoidance_enabled = true
+max_speed = 50.0
+debug_enabled = true
+
+[node name="Timer" type="Timer" parent="enemy/Navigation" unique_id=494827548]
+wait_time = 0.1
+autostart = true
+
+[node name="texture" type="Sprite2D" parent="enemy" unique_id=1628922813]
+position = Vector2(-4.172325e-07, -1.013279e-06)
+scale = Vector2(1.4285713, 1.2857143)
+texture = ExtResource("2_8ln6b")
+region_enabled = true
+region_rect = Rect2(17, 16, 14, 16)
+
+[connection signal="velocity_computed" from="enemy/Navigation/NavigationAgent2D" to="enemy" method="_on_navigation_agent_2d_velocity_computed"]
+[connection signal="timeout" from="enemy/Navigation/Timer" to="enemy" method="_on_timer_timeout"]

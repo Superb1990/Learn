@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cgtm6gbnmgjbf"]
+
+[ext_resource type="Script" uid="uid://cl4tayhr1yce0" path="res://异步await.gd" id="1_os8cx"]
+
+[node name="Node_await" type="Node2D" unique_id=1489151427]
+script = ExtResource("1_os8cx")
+
+[node name="Button" type="Button" parent="." unique_id=1369591037]
+offset_left = 405.0
+offset_top = 395.0
+offset_right = 619.0
+offset_bottom = 431.0
+text = "测试await"
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]

@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dyodvcx2syllr"]
+
+[ext_resource type="Script" uid="uid://cccrvwu7w4psk" path="res://SimpleHttpClent.gd" id="2_8vmet"]
+[ext_resource type="Script" uid="uid://bc4vt7jk083x1" path="res://http_test.gd" id="2_tlxba"]
+
+[node name="HttpTest" type="Node2D" unique_id=507232085]
+script = ExtResource("2_tlxba")
+
+[node name="SimpleHttpClent" type="Node2D" parent="." unique_id=1911078499]
+script = ExtResource("2_8vmet")

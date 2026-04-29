@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://bqjkn7u5xj5v6"]
+
+[ext_resource type="Script" uid="uid://7xn3uaa3pona" path="res://node_2d.gd" id="1_wtcfe"]
+
+[node name="Node2D" type="Node2D" unique_id=1987842674]
+script = ExtResource("1_wtcfe")
+
+[node name="Button" type="Button" parent="." unique_id=1927348022]
+offset_left = 185.0
+offset_top = 214.0
+offset_right = 247.0
+offset_bottom = 243.0
+text = "获取当前数"
+
+[node name="Button2" type="Button" parent="." unique_id=1633507655]
+offset_left = 341.0
+offset_top = 209.0
+offset_right = 404.0
+offset_bottom = 242.0
+text = "跳转场景2"
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
+[connection signal="button_down" from="Button2" to="." method="_on_button_2_button_down"]

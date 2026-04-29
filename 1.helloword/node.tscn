@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cpeki226gjdod"]
+
+[ext_resource type="Texture2D" uid="uid://p4nfodn4t585" path="res://icon.svg" id="1_sy5k4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sy5k4"]
+
+[node name="Node" type="Node" unique_id=1244810492]
+
+[node name="player" type="Node2D" parent="." unique_id=1719882612]
+position = Vector2(499, 252)
+
+[node name="Sprite2D" type="Sprite2D" parent="player" unique_id=1502148568]
+texture = ExtResource("1_sy5k4")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="player" unique_id=2036283339]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player/RigidBody2D" unique_id=1060460584]
+shape = SubResource("RectangleShape2D_sy5k4")
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="player/RigidBody2D" unique_id=1903831743]
+remote_path = NodePath("../../Sprite2D")

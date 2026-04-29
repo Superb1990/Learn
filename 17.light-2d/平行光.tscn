@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://cxdrf5lh7ejy"]
+
+[ext_resource type="Texture2D" uid="uid://c6fklfkelfgjr" path="res://white_square.png" id="1_vibd4"]
+
+[node name="平行光" type="Node2D" unique_id=60513518]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=599916453]
+modulate = Color(0.08235294, 0.050980393, 0.52156866, 1)
+position = Vector2(162.74998, 181.74998)
+scale = Vector2(0.34833342, 0.34833342)
+texture = ExtResource("1_vibd4")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1369551735]
+modulate = Color(0.015686275, 0.41568628, 0.03529412, 1)
+position = Vector2(378, 181)
+scale = Vector2(0.3516666, 0.3516666)
+texture = ExtResource("1_vibd4")
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=1105279141]
+modulate = Color(0.4627451, 0.023529412, 0.02745098, 1)
+position = Vector2(609, 184)
+scale = Vector2(0.35666665, 0.35666665)
+texture = ExtResource("1_vibd4")
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="." unique_id=912772016]

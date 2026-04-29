@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://d3cwmpvjclqws"]
+
+[ext_resource type="Texture2D" uid="uid://bf8hbxy5hsu7t" path="res://icon.svg" id="1_w770b"]
+[ext_resource type="Script" uid="uid://bswb71mx2ao7p" path="res://path_2d.gd" id="2_ueqy4"]
+[ext_resource type="Script" uid="uid://fnocbv1ye1h" path="res://path_follow_2d.gd" id="2_wrk1j"]
+
+[sub_resource type="Curve2D" id="Curve2D_wrk1j"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 183, 202, 0, 0, 0, 0, 250, 276, 0, 0, 0, 0, 393, 210, 0, 0, 0, 0, 491, 125, 0, 0, 0, 0, 597, 207, 0, 0, 0, 0, 509, 298, 0, 0, 0, 0, 589, 357, 0, 0, 0, 0, 703, 354, 0, 0, 0, 0, 716, 206, 0, 0, 0, 0, 766, 118, 0, 0, 0, 0, 854, 160, 0, 0, 0, 0, 828, 269, 0, 0, 0, 0, 764, 303, 0, 0, 0, 0, 794, 360, 0, 0, 0, 0, 908, 334, 0, 0, 0, 0, 893, 248, 0, 0, 0, 0, 984, 158, 0, 0, 0, 0, 1075, 121)
+}
+point_count = 18
+
+[node name="Node2D" type="Node2D" unique_id=1217802259]
+
+[node name="Player" type="Sprite2D" parent="." unique_id=489162328]
+position = Vector2(183, 202)
+rotation = 0.83500284
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_w770b")
+
+[node name="Path2D" type="Path2D" parent="." unique_id=1720719615]
+curve = SubResource("Curve2D_wrk1j")
+script = ExtResource("2_ueqy4")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=1957046934]
+position = Vector2(183, 202)
+rotation = 0.83500284
+script = ExtResource("2_wrk1j")
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Path2D/PathFollow2D" unique_id=1105286825]
+scale = Vector2(0.3, 0.3)
+remote_path = NodePath("../../../Player")

@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cux4nlemub8d5"]
+
+[ext_resource type="Script" uid="uid://3kq2li7vmq5d" path="res://node_thread.gd" id="1_fpp4e"]
+
+[node name="Node_thread" type="Node2D" unique_id=1955346763]
+script = ExtResource("1_fpp4e")
+
+[node name="Button" type="Button" parent="." unique_id=1575342039]
+offset_left = 474.0
+offset_top = 355.0
+offset_right = 558.0
+offset_bottom = 382.0
+text = "btn"
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]

@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://phu650xqlkco"]
+
+[ext_resource type="Texture2D" uid="uid://crt6kcd54qhly" path="res://icon.svg" id="1_anrbd"]
+[ext_resource type="Script" uid="uid://bbhyhgxb23gij" path="res://child_icon_1.gd" id="2_ua21o"]
+[ext_resource type="Script" uid="uid://cfecsb7svy342" path="res://child_2.gd" id="3_ua21o"]
+
+[node name="自定义信号" type="Node2D" unique_id=1908032870]
+
+[node name="Child1" type="Node2D" parent="." unique_id=793660967]
+
+[node name="childIcon1" type="Sprite2D" parent="Child1" unique_id=1450398491]
+position = Vector2(470, 314)
+texture = ExtResource("1_anrbd")
+script = ExtResource("2_ua21o")
+
+[node name="Button" type="Button" parent="Child1/childIcon1" unique_id=223801058]
+offset_left = -61.0
+offset_top = 138.0
+offset_right = 68.0
+offset_bottom = 174.0
+text = "测试信号Signal"
+
+[node name="Child2" type="Node2D" parent="." unique_id=577687119]
+script = ExtResource("3_ua21o")
+
+[connection signal="button_down" from="Child1/childIcon1/Button" to="Child1/childIcon1" method="_on_button_button_down"]
