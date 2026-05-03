@@ -16,17 +16,19 @@ func _physics_process(delta: float) -> void:
 		velocity.x= move_toward(velocity.x,0,STOP_FORCE*delta)
 		#if walk==0.0:
 			#return
-		print("enter walk<walk force * 0.2:")
-		print("walk:" ,walk)
-		
-		print("velocity.x : ",velocity.x)
-		print("stop_force * delta:",STOP_FORCE*delta)
+		#print("enter walk<walk force * 0.2:")
+		#print("walk:" ,walk)
+		#
+		#print("velocity.x : ",velocity.x)
+		#print("stop_force * delta:",STOP_FORCE*delta)
 	else :
 		print("enter walk>=walk force * 0.2:")
 		print("current velocity.x:",velocity.x)
 		print("current walk*delta:",walk*delta)
 		velocity.x+=walk*delta
 		print("finish velocity.x:",velocity.x)
+	velocity.x = clamp(velocity.x, -WALK_MAX_SPEED, WALK_MAX_SPEED)
+	velocity.y+=gravity*delta
 	move_and_slide()
 	
 	if is_on_floor()&&Input.is_action_just_pressed("jump"):
